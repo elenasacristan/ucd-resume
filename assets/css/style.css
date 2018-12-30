@@ -4,15 +4,93 @@
 
 /*********************COLORS*****************/
 
-.heading {
-    background-color: grey;
+.bg-color-name-title {
+    background-color: #376838;
 }
+
+
+.bg-color-home {
+    background-color: #79c77a;
+    border-right: 2px solid #baeebb;
+    border-top: 2px solid #baeebb;
+
+}
+
+
+
+.bg-color-resume {
+    background-color: #79c77a;
+    border-top: 2px solid #baeebb;
+}
+
+
+
+.bg-color-contact {
+    background-color: #79c77a;
+    border-right: 2px solid #baeebb;
+    border-top: 2px solid #baeebb;
+    border-bottom: 2px solid #baeebb;
+
+
+}
+
+.bg-color-download {
+    background-color: #79c77a;
+    border-bottom: 2px solid #baeebb;
+    border-top: 2px solid #baeebb;
+
+
+
+}
+
+
+
+.bg-personal {
+    background-color: #5a93a7;
+}
+
+.bg-three-reasons {
+    background-color: white;
+}
+
+/******************** Special, paddings, margins, text ****************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+.uppercased {
+    text-transform: uppercase;
+    /* Will be used in all the titles */
+}
+
+.general-sub {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    /*I don't see what difference this make??*/
+}
+
+
 
 
 /******************** HEADER ****************/
 
-header{
-    margin:0;
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;
 }
 
 
@@ -23,25 +101,228 @@ header{
     background-size: cover;
     min-height: 360px;
     transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
+    /**** We add the -moz, -webkit and -o to make sure it is compatible with all the browsers ***/
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+
 }
 
 
-.name{
+.name {
     font-family: "Exo", sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    margin-top:0;
-    margin-left: 70px;
-    color:white;
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 50px;
+    color: white;
 }
 
-.title{
+.title {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
     margin-bottom: 90px;
-    margin-left: 70px;
-    color:white;
+    color: white;
+}
+
+#nav {
+    margin: 0;
+}
+
+/* Rule of thirds, it will take a third of the headers height */
+
+.menuitem {
+    padding: 0;
+    height: 120px;
+    text-align: center;
+
+
+}
+
+
+
+.menuitem a {
+    width: 100%;
+    /*we want all the area to act as link*/
+    height: 120px;
+    /*we want all the area to act as link*/
+    color: white;
+    text-decoration: none;
+}
+
+.menuitem a i {
+    padding-top: 30px;
+    display: block;
+    font-size: 26px;
+}
+
+
+.menuitem span {
+    display: block;
+    padding-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    width: 100%;
+    /* WHat different does this make? */
+    text-align: center;
+    /*Is this not redundant??*/
+    font-weight: 300;
+}
+
+#nav li {
+    padding: 0;
+}
+
+
+
+/***************** HOVER ********************/
+
+.hvr-sweep-to-bottom:before {
+    /** WHY IS before USED FOR?? */
+    background-color: rgba(255, 255, 255, 0.2);
+    /*IN the solutions we have height:120px but I haven't add that and stills looks fine.. ??*/
+}
+
+
+
+
+/******************** Footer ****************/
+
+footer {
+    background-color: #376838;
+    color: white;
+    margin: 0px;
+    min-height: 120px
+}
+
+.downloadcv i {
+    /*Why in the solution uses footer .download i?? instead of only .download i?? */
+    color: white;
+    font-size: 18px;
+    padding-left: 5px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+
+}
+
+.downloadcv i:hover {
+    color: orange;
+
+
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px 0px;
+    color: white;
+    font-size: 13px;
+    line-height: 7px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+
+}
+
+
+.social-links a i:hover {
+    color: orange;
+
+}
+
+#footer-margin {
+    /**Why do we use ID here instead of class**/
+    margin: 20px;
+}
+
+
+/********** SECTION 3 ABOUT ME *****************/
+
+.section-column {
+    display: table-cell;
+    padding: 0px 30px 30px;
+    /*float:none;*/
+}
+
+.row-table {
+    display: table;
+}
+
+section h3 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 200;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.tree-reasons-headings {
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+
+}
+
+.three-reasons-icon {
+    color: #1fc5fe;
+    font-size: 26px;
+}
+
+
+section p {
+    margin-bottom: 40px;
+}
+
+
+/*********** media queries ***********/
+
+@media (min-width:991px) {
+    .bg-color-home {
+        border-bottom: 2px solid #baeebb;
+
+    }
+}
+
+
+
+@media (min-width:992px) {
+    .section-column {
+
+        float: none;
+    }
+}
+
+@media (min-width:991px) {
+    .bg-color-resume {
+        border-bottom: 2px solid #baeebb;
+        border-right: 2px solid #baeebb;
+
+    }
+}
+
+@media (min-width:991px) {
+    .bg-color-contact {
+        border-top: 2px solid #baeebb;
+
+    }
+}
+
+
+
+@media (min-width:991px) {
+    .bg-color-download {
+        border-top: 2px solid #baeebb;
+
+    }
 }
