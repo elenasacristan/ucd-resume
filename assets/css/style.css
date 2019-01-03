@@ -53,6 +53,10 @@
     background-color: white;
 }
 
+.bg-contact {
+    background-color: white;
+}
+
 /******************** Special, paddings, margins, text ****************/
 
 h1,
@@ -66,6 +70,13 @@ h5 {
 .uppercased {
     text-transform: uppercase;
     /* Will be used in all the titles */
+}
+
+.section-heading {
+    font-family: 'Exo', sans-serif;
+    font-weight: 200;
+    margin-bottom: 40px;
+    margin-top: 25px;
 }
 
 .general-sub {
@@ -261,12 +272,7 @@ footer {
     display: table;
 }
 
-section h3 {
-    font-family: 'Exo', sans-serif;
-    font-weight: 200;
-    margin-bottom: 40px;
-    margin-top: 25px;
-}
+
 
 .tree-reasons-headings {
     font-family: 'Exo', sans-serif;
@@ -328,53 +334,11 @@ section p {
     width: 60%;
 }
 
-/*********** media queries ***********/
-
-@media (min-width:991px) {
-    .bg-color-home {
-        border-bottom: 2px solid #baeebb;
-
-    }
-}
-
-
-
-@media (min-width:992px) {
-    .section-column {
-
-        float: none;
-    }
-}
-
-@media (min-width:991px) {
-    .bg-color-resume {
-        border-bottom: 2px solid #baeebb;
-        border-right: 2px solid #baeebb;
-
-    }
-}
-
-@media (min-width:991px) {
-    .bg-color-contact {
-        border-top: 2px solid #baeebb;
-
-    }
-}
-
-
-
-@media (min-width:991px) {
-    .bg-color-download {
-        border-top: 2px solid #baeebb;
-
-    }
-}
-
 
 /******* My skills progress bars************/
 
 .progress {
-   position: relative;
+    position: relative;
     height: 25px;
 }
 
@@ -390,37 +354,112 @@ section p {
 
 /******* Working history******/
 
-.timeline-item {
- padding: 4em 2em 0em 2em;  /**** Why do we use em unitsintead of pixels???*****/
- border-left:1px solid;
- position:relative;
+.section-heading-wh {
+    font-family: 'Exo', sans-serif;
+    font-weight: 200;
+    margin-bottom: 40px;
+    margin-top: 25px;
+    color: #376838;
+
 }
 
-.timeline-item p{
+.timeline-item {
+    padding: 4em 2em 0em 2em;
+    /**** Why do we use em unitsintead of pixels???*****/
+    border-left: 1px solid;
+    position: relative;
+    color: #376838;
+}
+
+.timeline-item p {
     margin: 0;
     padding: 0;
 }
 
-.timeline-item:before{
+.timeline-item:before {
     content: attr(dates);
     display: block;
-    position:absolute;
-    top:3em;
-    left:2.5em;
-    font-size:0.8em;
-    font-family: 'Exo',sans-serif;
+    position: absolute;
+    top: 3em;
+    left: 2.5em;
+    font-size: 0.8em;
+    font-family: 'Exo', sans-serif;
     font-weight: 400;
 }
 
-.timeline-item:after{
+.timeline-item:after {
     content: '';
     display: block;
-    position:absolute;
-    top:2.5em;
-    left:-6px;  /**** How is this calculated**/
-    width:12px;
+    position: absolute;
+    top: 2.5em;
+    left: -6px;
+    /**** How is this calculated**/
+    width: 12px;
     height: 12px;
     border-radius: 12px;
-    background-color: white;
-    
+    background-color: #efba6e;
+
+}
+
+
+/**** Contact form ******/
+
+.contact-heading {
+    font-family: 'Exo', sans-serif;
+    font-weight: 200;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.center-form {
+    padding: 25px;
+    max-width: 70%;
+    margin: 0px auto;
+}
+
+button[type="submit"] {
+    background-color: #79c77a;
+    color: white;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #bde7be;
+}
+
+
+
+/*********** media queries ***********/
+
+@media (min-width:992px) {
+    .bg-color-home {
+        border-bottom: 2px solid #baeebb;
+
+    }
+
+    .section-column {
+
+        float: none;
+    }
+
+    .bg-color-resume {
+        border-bottom: 2px solid #baeebb;
+        border-right: 2px solid #baeebb;
+
+    }
+
+    .bg-color-contact {
+        border-top: 2px solid #baeebb;
+
+    }
+
+    .bg-color-download {
+        border-top: 2px solid #baeebb;
+
+    }
+
+    .center-form {
+        max-width: 50%;
+        min-height: 225px;
+    }
 }
